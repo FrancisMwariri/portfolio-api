@@ -44,6 +44,7 @@ async def portfolio():
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
         }
 
+
         /* HEADER */
 
         .header {
@@ -66,6 +67,7 @@ async def portfolio():
             font-size: 24px;
             color: #2c3e50;
         }
+
 
         /* STUDENT INFORMATION */
 
@@ -94,6 +96,7 @@ async def portfolio():
             font-weight: bold;
         }
 
+
         /* ASSIGNMENTS HEADER */
 
         .assignments-header {
@@ -118,6 +121,7 @@ async def portfolio():
             color: #777;
             margin-bottom: 14px;
         }
+
 
         /* ASSIGNMENT ROWS */
 
@@ -150,6 +154,7 @@ async def portfolio():
             transform: translateX(2px);
         }
 
+
         /* LESSON BADGE */
 
         .lesson {
@@ -168,6 +173,7 @@ async def portfolio():
             margin-right: 10px;
         }
 
+
         /* ASSIGNMENT TITLE */
 
         .assignment-title {
@@ -178,6 +184,7 @@ async def portfolio():
 
             white-space: nowrap;
         }
+
 
         /* DESCRIPTION */
 
@@ -192,6 +199,7 @@ async def portfolio():
             text-overflow: ellipsis;
             white-space: nowrap;
         }
+
 
         /* FOOTER */
 
@@ -221,6 +229,7 @@ async def portfolio():
         footer a:hover {
             color: #3498db;
         }
+
 
         /* MOBILE */
 
@@ -259,6 +268,7 @@ async def portfolio():
 
     <div class="container">
 
+
         <!-- HEADER -->
 
         <div class="header">
@@ -285,7 +295,7 @@ async def portfolio():
                         Student Name:
                     </strong>
 
-                    Joy Minoo
+                    Francis Mwariri
                 </p>
 
 
@@ -295,7 +305,7 @@ async def portfolio():
                     </strong>
 
                     <span class="admission">
-                        C027-01-0861/2024
+                        C027-01-0829/2024
                     </span>
                 </p>
 
@@ -305,7 +315,7 @@ async def portfolio():
                         Email:
                     </strong>
 
-                    YOUR EMAIL HERE
+                    francis.macharia24@students.dkut.ac.ke
                 </p>
 
             </div>
@@ -339,193 +349,194 @@ async def portfolio():
         <div class="assignments">
 
 
-            <!-- LAB 3 -->
+
+            <!-- LESSON 3 -->
 
             <a
                 class="assignment"
-                href="#"
+                href="https://github.com/FrancisMwariri/gighub-api"
                 target="_blank"
                 rel="noopener noreferrer"
             >
 
                 <span class="lesson">
-                    Lab 3
+                    Lesson 3
                 </span>
 
                 <span class="assignment-title">
-                    GigHub API
+                    Routing, Parameters & Request Bodies
                 </span>
 
                 <span class="description">
-                    — FastAPI Backend Development
+                    — Path Parameters, Query Parameters, Pydantic Validation
                 </span>
 
             </a>
 
 
-            <!-- LAB 4 -->
+            <!-- LESSON 4 -->
 
             <a
                 class="assignment"
-                href="#"
+                href="https://github.com/FrancisMwariri/library-api"
                 target="_blank"
                 rel="noopener noreferrer"
             >
 
                 <span class="lesson">
-                    Lab 4
+                    Lesson 4
                 </span>
 
                 <span class="assignment-title">
-                    Library API
+                    PostgreSQL & SQLModel – Your First Database
                 </span>
 
                 <span class="description">
-                    — PostgreSQL, SQLModel & CRUD Operations
+                    — ORM, Database Migrations, SQLModel
                 </span>
 
             </a>
 
 
-            <!-- LAB 5 -->
+            <!-- LESSON 5 -->
 
             <a
                 class="assignment"
-                href="#"
+                href="https://github.com/FrancisMwariri/bookstore-api"
                 target="_blank"
                 rel="noopener noreferrer"
             >
 
                 <span class="lesson">
-                    Lab 5
+                    Lesson 5
                 </span>
 
                 <span class="assignment-title">
-                    Bookstore API
+                    CRUD Operations
                 </span>
 
                 <span class="description">
-                    — Database Integration & API Development
+                    — Create, Read, Update, Delete with Error Handling
                 </span>
 
             </a>
 
 
-            <!-- LAB 6 -->
+            <!-- LESSON 6 -->
 
             <a
                 class="assignment"
-                href="#"
+                href="https://github.com/FrancisMwariri/techvault-api"
                 target="_blank"
                 rel="noopener noreferrer"
             >
 
                 <span class="lesson">
-                    Lab 6
+                    Lesson 6
                 </span>
 
                 <span class="assignment-title">
-                    TechVault API
+                    Error Handling & Validation
                 </span>
 
                 <span class="description">
-                    — Validation & Error Handling
+                    — HTTPException, Custom Validators, Global Handlers
                 </span>
 
             </a>
 
 
-            <!-- LAB 7 -->
+            <!-- LESSON 7 -->
 
             <a
                 class="assignment"
-                href="#"
+                href="https://github.com/FrancisMwariri/healthtrack-api"
                 target="_blank"
                 rel="noopener noreferrer"
             >
 
                 <span class="lesson">
-                    Lab 7
+                    Lesson 7
                 </span>
 
                 <span class="assignment-title">
-                    HealthTrack API
+                    User Authentication – JWT & Password Hashing
                 </span>
 
                 <span class="description">
-                    — JWT Authentication & Password Security
+                    — JWT Tokens, bcrypt, Login/Register Endpoints
                 </span>
 
             </a>
 
 
-            <!-- LAB 8 -->
+            <!-- LESSON 8 -->
 
             <a
                 class="assignment"
-                href="#"
+                href="https://github.com/FrancisMwariri/clinicguard-api"
                 target="_blank"
                 rel="noopener noreferrer"
             >
 
                 <span class="lesson">
-                    Lab 8
+                    Lesson 8
                 </span>
 
                 <span class="assignment-title">
-                    ClinicGuard API
+                    Authorization & Rate Limiting
                 </span>
 
                 <span class="description">
-                    — Authorization, RBAC & Rate Limiting
+                    — RBAC, Dependency Injection, Rate Limiting
                 </span>
 
             </a>
 
 
-            <!-- LAB 9 -->
+            <!-- LESSON 9 -->
 
             <a
                 class="assignment"
-                href="#"
+                href="https://github.com/FrancisMwariri/sendit-api"
                 target="_blank"
                 rel="noopener noreferrer"
             >
 
                 <span class="lesson">
-                    Lab 9
+                    Lesson 9
                 </span>
 
                 <span class="assignment-title">
-                    SendIt API
+                    File Uploads & External APIs
                 </span>
 
                 <span class="description">
-                    — File Uploads & External APIs
+                    — File Validation, httpx, Environment Variables
                 </span>
 
             </a>
 
 
-            <!-- LAB 10 -->
+            <!-- LESSON 10 -->
 
             <a
                 class="assignment"
-                href="#"
+                href="https://github.com/FrancisMwariri/product-api-clouddeploy"
                 target="_blank"
                 rel="noopener noreferrer"
             >
 
                 <span class="lesson">
-                    Lab 10
+                    Lesson 10
                 </span>
 
                 <span class="assignment-title">
-                    Product API Cloud Deployment
+                    Testing & Deployment (Cloud)
                 </span>
 
                 <span class="description">
-                    — Testing, CI/CD & Render Deployment
+                    — Pytest, CI/CD, Render Deployment
                 </span>
 
             </a>
@@ -541,7 +552,7 @@ async def portfolio():
             <p>
                 Deployed on Render |
                 <a
-                    href="#"
+                    href="https://github.com/FrancisMwariri"
                     target="_blank"
                     rel="noopener noreferrer"
                 >
