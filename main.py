@@ -44,7 +44,6 @@ async def portfolio():
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
         }
 
-
         /* HEADER */
 
         .header {
@@ -67,7 +66,6 @@ async def portfolio():
             font-size: 24px;
             color: #2c3e50;
         }
-
 
         /* STUDENT INFORMATION */
 
@@ -96,7 +94,6 @@ async def portfolio():
             font-weight: bold;
         }
 
-
         /* ASSIGNMENTS HEADER */
 
         .assignments-header {
@@ -121,7 +118,6 @@ async def portfolio():
             color: #777;
             margin-bottom: 14px;
         }
-
 
         /* ASSIGNMENT ROWS */
 
@@ -154,7 +150,6 @@ async def portfolio():
             transform: translateX(2px);
         }
 
-
         /* LESSON BADGE */
 
         .lesson {
@@ -173,7 +168,6 @@ async def portfolio():
             margin-right: 10px;
         }
 
-
         /* ASSIGNMENT TITLE */
 
         .assignment-title {
@@ -184,7 +178,6 @@ async def portfolio():
 
             white-space: nowrap;
         }
-
 
         /* DESCRIPTION */
 
@@ -199,7 +192,6 @@ async def portfolio():
             text-overflow: ellipsis;
             white-space: nowrap;
         }
-
 
         /* FOOTER */
 
@@ -229,7 +221,6 @@ async def portfolio():
         footer a:hover {
             color: #3498db;
         }
-
 
         /* MOBILE */
 
@@ -268,7 +259,6 @@ async def portfolio():
 
     <div class="container">
 
-
         <!-- HEADER -->
 
         <div class="header">
@@ -295,7 +285,7 @@ async def portfolio():
                         Student Name:
                     </strong>
 
-                    Francis Mwariri
+                    Joy Minoo
                 </p>
 
 
@@ -305,7 +295,7 @@ async def portfolio():
                     </strong>
 
                     <span class="admission">
-                        C027-01-0829/2024
+                        C027-01-0861/2024
                     </span>
                 </p>
 
@@ -315,7 +305,7 @@ async def portfolio():
                         Email:
                     </strong>
 
-                    francis.macharia24@students.dkut.ac.ke
+                    YOUR EMAIL HERE
                 </p>
 
             </div>
@@ -353,7 +343,7 @@ async def portfolio():
 
             <a
                 class="assignment"
-                href="https://github.com/FrancisMwariri/gighub-api"
+                href="#"
                 target="_blank"
                 rel="noopener noreferrer"
             >
@@ -377,7 +367,7 @@ async def portfolio():
 
             <a
                 class="assignment"
-                href="https://github.com/FrancisMwariri/library-api"
+                href="#"
                 target="_blank"
                 rel="noopener noreferrer"
             >
@@ -401,7 +391,7 @@ async def portfolio():
 
             <a
                 class="assignment"
-                href="https://github.com/FrancisMwariri/bookstore-api"
+                href="#"
                 target="_blank"
                 rel="noopener noreferrer"
             >
@@ -425,7 +415,7 @@ async def portfolio():
 
             <a
                 class="assignment"
-                href="https://github.com/FrancisMwariri/techvault-api"
+                href="#"
                 target="_blank"
                 rel="noopener noreferrer"
             >
@@ -449,7 +439,7 @@ async def portfolio():
 
             <a
                 class="assignment"
-                href="https://github.com/FrancisMwariri/healthtrack-api"
+                href="#"
                 target="_blank"
                 rel="noopener noreferrer"
             >
@@ -473,7 +463,7 @@ async def portfolio():
 
             <a
                 class="assignment"
-                href="https://github.com/FrancisMwariri/clinicguard-api"
+                href="#"
                 target="_blank"
                 rel="noopener noreferrer"
             >
@@ -497,7 +487,7 @@ async def portfolio():
 
             <a
                 class="assignment"
-                href="https://github.com/FrancisMwariri/sendit-api"
+                href="#"
                 target="_blank"
                 rel="noopener noreferrer"
             >
@@ -521,7 +511,7 @@ async def portfolio():
 
             <a
                 class="assignment"
-                href="https://github.com/FrancisMwariri/product-api-clouddeploy"
+                href="#"
                 target="_blank"
                 rel="noopener noreferrer"
             >
@@ -551,7 +541,7 @@ async def portfolio():
             <p>
                 Deployed on Render |
                 <a
-                    href="https://github.com/FrancisMwariri"
+                    href="#"
                     target="_blank"
                     rel="noopener noreferrer"
                 >
