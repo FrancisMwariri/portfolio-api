@@ -15,9 +15,10 @@ async def portfolio():
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <title>Francis Mwariri | Backend Development Portfolio</title>
+        <title>Backend Development Portfolio</title>
 
         <style>
+
             * {
                 margin: 0;
                 padding: 0;
@@ -32,8 +33,8 @@ async def portfolio():
             }
 
             .container {
-                width: 90%;
-                max-width: 1000px;
+                width: 92%;
+                max-width: 1100px;
                 margin: 40px auto;
             }
 
@@ -42,20 +43,20 @@ async def portfolio():
             .header {
                 background: linear-gradient(135deg, #111827, #1e3a8a);
                 color: white;
-                padding: 40px;
-                border-radius: 15px;
-                margin-bottom: 30px;
+                padding: 45px;
+                border-radius: 18px;
+                margin-bottom: 35px;
                 box-shadow: 0 10px 30px rgba(0, 0, 0, 0.10);
             }
 
             .header h1 {
-                font-size: 36px;
+                font-size: 38px;
                 margin-bottom: 25px;
             }
 
-            .student-info {
+            .student-info p {
+                margin: 10px 0;
                 font-size: 16px;
-                line-height: 1.8;
             }
 
             .admission {
@@ -71,11 +72,11 @@ async def portfolio():
 
             .intro {
                 text-align: center;
-                margin-bottom: 30px;
+                margin: 40px 0 30px;
             }
 
             .intro h2 {
-                font-size: 28px;
+                font-size: 30px;
                 margin-bottom: 10px;
             }
 
@@ -86,63 +87,78 @@ async def portfolio():
             /* ASSIGNMENTS */
 
             .assignments {
-                display: flex;
-                flex-direction: column;
-                gap: 15px;
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 20px;
             }
 
             .assignment {
                 background: white;
+                padding: 25px;
+                border-radius: 14px;
                 border: 1px solid #e5e7eb;
-                border-radius: 10px;
-                padding: 20px;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
                 transition: 0.3s ease;
             }
 
             .assignment:hover {
-                transform: translateY(-3px);
-                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-            }
-
-            .assignment a {
-                text-decoration: none;
-                color: #1f2937;
-                display: block;
+                transform: translateY(-5px);
+                box-shadow: 0 12px 25px rgba(0, 0, 0, 0.09);
             }
 
             .lesson {
                 color: #2563eb;
+                font-size: 15px;
                 font-weight: bold;
-                font-size: 14px;
-                margin-bottom: 5px;
+                margin-bottom: 6px;
                 text-transform: uppercase;
             }
 
-            .title {
-                font-size: 19px;
-                font-weight: bold;
-                margin-bottom: 5px;
+            .assignment h3 {
+                font-size: 20px;
+                margin-bottom: 10px;
             }
 
-            .description {
+            .assignment p {
                 color: #6b7280;
                 font-size: 14px;
+                margin-bottom: 18px;
             }
 
-            .no-repository {
-                color: #9ca3af;
+            .github-link {
+                display: inline-block;
+                background: #2563eb;
+                color: white;
+                padding: 9px 16px;
+                border-radius: 7px;
+                text-decoration: none;
                 font-size: 14px;
-                margin-top: 8px;
+                font-weight: bold;
+                transition: 0.2s;
+            }
+
+            .github-link:hover {
+                background: #1d4ed8;
+            }
+
+            .not-available {
+                display: inline-block;
+                background: #e5e7eb;
+                color: #6b7280;
+                padding: 9px 16px;
+                border-radius: 7px;
+                font-size: 14px;
             }
 
             /* FOOTER */
 
             footer {
                 text-align: center;
-                margin-top: 40px;
-                padding: 25px;
+                margin-top: 50px;
+                padding: 30px 10px;
                 border-top: 1px solid #e5e7eb;
                 color: #6b7280;
+                font-size: 14px;
             }
 
             footer p {
@@ -152,7 +168,6 @@ async def portfolio():
             footer a {
                 color: #2563eb;
                 text-decoration: none;
-                font-weight: bold;
             }
 
             /* MOBILE */
@@ -165,15 +180,15 @@ async def portfolio():
                 }
 
                 .header {
-                    padding: 25px;
+                    padding: 30px 22px;
                 }
 
                 .header h1 {
-                    font-size: 28px;
+                    font-size: 29px;
                 }
 
-                .assignment {
-                    padding: 18px;
+                .assignments {
+                    grid-template-columns: 1fr;
                 }
 
             }
@@ -192,7 +207,7 @@ async def portfolio():
 
             <div class="header">
 
-                <h1>📚 Backend Development Portfolio</h1>
+                <h1>Backend Development Portfolio</h1>
 
                 <div class="student-info">
 
@@ -220,11 +235,11 @@ async def portfolio():
             </div>
 
 
-            <!-- BACKEND ASSIGNMENTS -->
+            <!-- ASSIGNMENTS INTRODUCTION -->
 
             <div class="intro">
 
-                <h2>💻 Backend Assignments</h2>
+                <h2>Backend Assignments</h2>
 
                 <p>
                     Click on any assignment to view the
@@ -234,6 +249,8 @@ async def portfolio():
             </div>
 
 
+            <!-- ASSIGNMENTS -->
+
             <div class="assignments">
 
 
@@ -241,25 +258,22 @@ async def portfolio():
 
                 <div class="assignment">
 
-                    <a href="#" onclick="return false;">
+                    <div class="lesson">
+                        Lesson 1
+                    </div>
 
-                        <div class="lesson">
-                            Lesson 1
-                        </div>
+                    <h3>
+                        HTTP & Your First API
+                    </h3>
 
-                        <div class="title">
-                            HTTP & Your First API
-                        </div>
+                    <p>
+                        FastAPI + Uvicorn, HTTP Methods,
+                        Status Codes
+                    </p>
 
-                        <div class="description">
-                            FastAPI + Uvicorn, HTTP Methods, Status Codes
-                        </div>
-
-                        <div class="no-repository">
-                            No Repository
-                        </div>
-
-                    </a>
+                    <span class="not-available">
+                        No Repository
+                    </span>
 
                 </div>
 
@@ -268,25 +282,22 @@ async def portfolio():
 
                 <div class="assignment">
 
-                    <a href="#" onclick="return false;">
+                    <div class="lesson">
+                        Lesson 2
+                    </div>
 
-                        <div class="lesson">
-                            Lesson 2
-                        </div>
+                    <h3>
+                        Docker - Packaging Your API
+                    </h3>
 
-                        <div class="title">
-                            Docker - Packaging Your API
-                        </div>
+                    <p>
+                        Containers, Dockerfiles,
+                        Docker Compose
+                    </p>
 
-                        <div class="description">
-                            Containers, Dockerfiles, Docker Compose
-                        </div>
-
-                        <div class="no-repository">
-                            No Repository
-                        </div>
-
-                    </a>
+                    <span class="not-available">
+                        No Repository
+                    </span>
 
                 </div>
 
@@ -295,26 +306,22 @@ async def portfolio():
 
                 <div class="assignment">
 
-                    <a href="#" onclick="return false;">
+                    <div class="lesson">
+                        Lesson 3
+                    </div>
 
-                        <div class="lesson">
-                            Lesson 3
-                        </div>
+                    <h3>
+                        Routing, Parameters & Request Bodies
+                    </h3>
 
-                        <div class="title">
-                            Routing, Parameters & Request Bodies
-                        </div>
+                    <p>
+                        Path Parameters, Query Parameters,
+                        Pydantic Validation
+                    </p>
 
-                        <div class="description">
-                            Path Parameters, Query Parameters,
-                            Pydantic Validation
-                        </div>
-
-                        <div class="no-repository">
-                            No Repository
-                        </div>
-
-                    </a>
+                    <span class="not-available">
+                        No Repository
+                    </span>
 
                 </div>
 
@@ -323,24 +330,26 @@ async def portfolio():
 
                 <div class="assignment">
 
+                    <div class="lesson">
+                        Lesson 4
+                    </div>
+
+                    <h3>
+                        PostgreSQL & SQLModel – Your First Database
+                    </h3>
+
+                    <p>
+                        ORM, Database Migrations,
+                        SQLModel
+                    </p>
+
                     <a
+                        class="github-link"
                         href="https://github.com/FrancisMwariri/bookstore-api"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-
-                        <div class="lesson">
-                            Lesson 4
-                        </div>
-
-                        <div class="title">
-                            PostgreSQL & SQLModel – Your First Database
-                        </div>
-
-                        <div class="description">
-                            ORM, Database Migrations, SQLModel
-                        </div>
-
+                        View on GitHub
                     </a>
 
                 </div>
@@ -350,24 +359,26 @@ async def portfolio():
 
                 <div class="assignment">
 
+                    <div class="lesson">
+                        Lesson 5
+                    </div>
+
+                    <h3>
+                        CRUD Operations
+                    </h3>
+
+                    <p>
+                        Create, Read, Update, Delete
+                        with Error Handling
+                    </p>
+
                     <a
+                        class="github-link"
                         href="https://github.com/FrancisMwariri/product-api"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-
-                        <div class="lesson">
-                            Lesson 5
-                        </div>
-
-                        <div class="title">
-                            CRUD Operations
-                        </div>
-
-                        <div class="description">
-                            Create, Read, Update, Delete with Error Handling
-                        </div>
-
+                        View on GitHub
                     </a>
 
                 </div>
@@ -377,24 +388,26 @@ async def portfolio():
 
                 <div class="assignment">
 
+                    <div class="lesson">
+                        Lesson 6
+                    </div>
+
+                    <h3>
+                        Error Handling & Validation
+                    </h3>
+
+                    <p>
+                        HTTPException, Custom Validators,
+                        Global Handlers
+                    </p>
+
                     <a
+                        class="github-link"
                         href="https://github.com/FrancisMwariri/techvault-api"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-
-                        <div class="lesson">
-                            Lesson 6
-                        </div>
-
-                        <div class="title">
-                            Error Handling & Validation
-                        </div>
-
-                        <div class="description">
-                            HTTPException, Custom Validators, Global Handlers
-                        </div>
-
+                        View on GitHub
                     </a>
 
                 </div>
@@ -404,24 +417,26 @@ async def portfolio():
 
                 <div class="assignment">
 
+                    <div class="lesson">
+                        Lesson 7
+                    </div>
+
+                    <h3>
+                        User Authentication – JWT & Password Hashing
+                    </h3>
+
+                    <p>
+                        JWT Tokens, bcrypt,
+                        Login/Register Endpoints
+                    </p>
+
                     <a
+                        class="github-link"
                         href="https://github.com/FrancisMwariri/healthtrack-api"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-
-                        <div class="lesson">
-                            Lesson 7
-                        </div>
-
-                        <div class="title">
-                            User Authentication – JWT & Password Hashing
-                        </div>
-
-                        <div class="description">
-                            JWT Tokens, bcrypt, Login/Register Endpoints
-                        </div>
-
+                        View on GitHub
                     </a>
 
                 </div>
@@ -431,24 +446,26 @@ async def portfolio():
 
                 <div class="assignment">
 
+                    <div class="lesson">
+                        Lesson 8
+                    </div>
+
+                    <h3>
+                        Authorization & Rate Limiting
+                    </h3>
+
+                    <p>
+                        RBAC, Dependency Injection,
+                        Rate Limiting
+                    </p>
+
                     <a
+                        class="github-link"
                         href="https://github.com/FrancisMwariri/clinicguard-api"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-
-                        <div class="lesson">
-                            Lesson 8
-                        </div>
-
-                        <div class="title">
-                            Authorization & Rate Limiting
-                        </div>
-
-                        <div class="description">
-                            RBAC, Dependency Injection, Rate Limiting
-                        </div>
-
+                        View on GitHub
                     </a>
 
                 </div>
@@ -458,24 +475,26 @@ async def portfolio():
 
                 <div class="assignment">
 
+                    <div class="lesson">
+                        Lesson 9
+                    </div>
+
+                    <h3>
+                        File Uploads & External APIs
+                    </h3>
+
+                    <p>
+                        File Validation, httpx,
+                        Environment Variables
+                    </p>
+
                     <a
+                        class="github-link"
                         href="https://github.com/FrancisMwariri/sendit-api"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-
-                        <div class="lesson">
-                            Lesson 9
-                        </div>
-
-                        <div class="title">
-                            File Uploads & External APIs
-                        </div>
-
-                        <div class="description">
-                            File Validation, httpx, Environment Variables
-                        </div>
-
+                        View on GitHub
                     </a>
 
                 </div>
@@ -485,24 +504,26 @@ async def portfolio():
 
                 <div class="assignment">
 
+                    <div class="lesson">
+                        Lesson 10
+                    </div>
+
+                    <h3>
+                        Testing & Deployment (Cloud)
+                    </h3>
+
+                    <p>
+                        Pytest, CI/CD,
+                        Render Deployment
+                    </p>
+
                     <a
+                        class="github-link"
                         href="https://github.com/FrancisMwariri/product-api-clouddeploy"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-
-                        <div class="lesson">
-                            Lesson 10
-                        </div>
-
-                        <div class="title">
-                            Testing & Deployment (Cloud)
-                        </div>
-
-                        <div class="description">
-                            Pytest, CI/CD, Render Deployment
-                        </div>
-
+                        View on GitHub
                     </a>
 
                 </div>
@@ -520,7 +541,7 @@ async def portfolio():
                 </p>
 
                 <p>
-                    ⚠️ Deployed on Render |
+                    Deployed on Render |
                     <a
                         href="https://github.com/FrancisMwariri"
                         target="_blank"
