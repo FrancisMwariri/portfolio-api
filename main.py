@@ -12,163 +12,224 @@ async def portfolio():
     <html lang="en">
 
     <head>
+
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1.0">
 
         <title>Backend Development Portfolio</title>
 
         <style>
 
             * {
+                box-sizing: border-box;
                 margin: 0;
                 padding: 0;
-                box-sizing: border-box;
             }
 
             body {
                 font-family: Arial, Helvetica, sans-serif;
-                background: #f4f7fb;
+                background: #f4f4f4;
                 color: #1f2937;
-                line-height: 1.6;
             }
 
             .container {
-                width: 92%;
-                max-width: 1100px;
-                margin: 40px auto;
+                width: 95%;
+                max-width: 720px;
+                margin: 10px auto;
+                background: white;
+                padding: 24px;
+                border-radius: 8px;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
             }
+
 
             /* HEADER */
 
             .header {
-                background: linear-gradient(135deg, #111827, #1e3a8a);
-                color: white;
-                padding: 45px;
-                border-radius: 18px;
-                margin-bottom: 35px;
-                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.10);
+                margin-bottom: 16px;
             }
 
-            .header h1 {
-                font-size: 38px;
-                margin-bottom: 25px;
+            .title {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                padding-bottom: 8px;
+                border-bottom: 2px solid #3498db;
+            }
+
+            .title-icon {
+                font-size: 22px;
+            }
+
+            .title h1 {
+                font-size: 24px;
+                color: #2c3e50;
+            }
+
+
+            /* STUDENT INFORMATION */
+
+            .student-info {
+                background: #eaf5fd;
+                padding: 20px 10px;
+                margin-top: 16px;
+                border-radius: 5px;
             }
 
             .student-info p {
-                margin: 10px 0;
-                font-size: 16px;
+                font-size: 12px;
+                margin-bottom: 12px;
+            }
+
+            .student-info p:last-child {
+                margin-bottom: 0;
+            }
+
+            .student-info strong {
+                color: #2c3e50;
             }
 
             .admission {
-                color: #60a5fa;
+                color: #2874a6;
                 font-weight: bold;
             }
 
-            .email {
-                color: #93c5fd;
+
+            /* ASSIGNMENTS HEADER */
+
+            .assignments-header {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                margin-top: 18px;
+                margin-bottom: 16px;
             }
 
-            /* INTRO */
-
-            .intro {
-                text-align: center;
-                margin: 40px 0 30px;
+            .assignments-header span {
+                font-size: 20px;
             }
 
-            .intro h2 {
-                font-size: 30px;
-                margin-bottom: 10px;
+            .assignments-header h2 {
+                font-size: 18px;
+                color: #111827;
             }
 
-            .intro p {
-                color: #6b7280;
+            .instruction {
+                font-size: 12px;
+                color: #777;
+                margin-bottom: 14px;
             }
 
-            /* ASSIGNMENTS */
+
+            /* ASSIGNMENT ROWS */
 
             .assignments {
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-                gap: 20px;
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
             }
 
             .assignment {
-                background: white;
-                padding: 25px;
-                border-radius: 14px;
-                border: 1px solid #e5e7eb;
-                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
-                transition: 0.3s ease;
+                display: flex;
+                align-items: center;
+                min-height: 38px;
+
+                background: #f8f9fa;
+
+                border-left: 4px solid #3498db;
+
+                border-radius: 5px;
+
+                padding: 7px 10px;
+
+                text-decoration: none;
+
+                transition: 0.2s ease;
             }
 
             .assignment:hover {
-                transform: translateY(-5px);
-                box-shadow: 0 12px 25px rgba(0, 0, 0, 0.09);
+                background: #eef6fc;
+                transform: translateX(2px);
             }
+
+
+            /* LESSON BADGE */
 
             .lesson {
-                color: #2563eb;
-                font-size: 15px;
-                font-weight: bold;
-                margin-bottom: 6px;
-                text-transform: uppercase;
-            }
-
-            .assignment h3 {
-                font-size: 20px;
-                margin-bottom: 10px;
-            }
-
-            .assignment p {
-                color: #6b7280;
-                font-size: 14px;
-                margin-bottom: 18px;
-            }
-
-            .github-link {
-                display: inline-block;
-                background: #2563eb;
+                background: #3498db;
                 color: white;
-                padding: 9px 16px;
-                border-radius: 7px;
-                text-decoration: none;
-                font-size: 14px;
+
+                border-radius: 12px;
+
+                padding: 3px 9px;
+
+                font-size: 10px;
                 font-weight: bold;
-                transition: 0.2s;
+
+                white-space: nowrap;
+
+                margin-right: 10px;
             }
 
-            .github-link:hover {
-                background: #1d4ed8;
+
+            /* ASSIGNMENT TITLE */
+
+            .assignment-title {
+                color: #1769aa;
+
+                font-size: 12px;
+                font-weight: bold;
+
+                white-space: nowrap;
             }
 
-            .not-available {
-                display: inline-block;
-                background: #e5e7eb;
-                color: #6b7280;
-                padding: 9px 16px;
-                border-radius: 7px;
-                font-size: 14px;
+
+            /* DESCRIPTION */
+
+            .description {
+                color: #777;
+
+                font-size: 11px;
+
+                margin-left: 8px;
+
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
             }
+
 
             /* FOOTER */
 
             footer {
-                text-align: center;
-                margin-top: 50px;
-                padding: 30px 10px;
+                margin-top: 22px;
+
+                padding-top: 18px;
+
                 border-top: 1px solid #e5e7eb;
-                color: #6b7280;
-                font-size: 14px;
+
+                text-align: center;
+
+                color: #888;
+
+                font-size: 11px;
             }
 
             footer p {
-                margin: 6px 0;
+                margin-bottom: 10px;
             }
 
             footer a {
-                color: #2563eb;
+                color: #777;
                 text-decoration: none;
             }
+
+            footer a:hover {
+                color: #3498db;
+            }
+
 
             /* MOBILE */
 
@@ -176,19 +237,24 @@ async def portfolio():
 
                 .container {
                     width: 94%;
-                    margin: 20px auto;
+                    padding: 18px;
+                    margin: 10px auto;
                 }
 
-                .header {
-                    padding: 30px 22px;
+                .title h1 {
+                    font-size: 21px;
                 }
 
-                .header h1 {
-                    font-size: 29px;
+                .assignment {
+                    align-items: center;
                 }
 
-                .assignments {
-                    grid-template-columns: 1fr;
+                .assignment-title {
+                    font-size: 11px;
+                }
+
+                .description {
+                    font-size: 10px;
                 }
 
             }
@@ -203,31 +269,53 @@ async def portfolio():
         <div class="container">
 
 
-            <!-- STUDENT INFORMATION -->
+            <!-- HEADER -->
 
             <div class="header">
 
-                <h1>Backend Development Portfolio</h1>
+                <div class="title">
+
+                    <div class="title-icon">
+                        📚
+                    </div>
+
+                    <h1>
+                        Backend Development Portfolio
+                    </h1>
+
+                </div>
+
+
+                <!-- STUDENT INFORMATION -->
 
                 <div class="student-info">
 
                     <p>
-                        <strong>Student Name:</strong>
+                        <strong>
+                            Student Name:
+                        </strong>
+
                         Francis Mwariri
                     </p>
 
+
                     <p>
-                        <strong>Admission Number:</strong>
+                        <strong>
+                            Admission Number:
+                        </strong>
+
                         <span class="admission">
                             C027-01-0829/2024
                         </span>
                     </p>
 
+
                     <p>
-                        <strong>Email:</strong>
-                        <span class="email">
-                            francis.macharia24@students.dkut.ac.ke
-                        </span>
+                        <strong>
+                            Email:
+                        </strong>
+
+                        francis.macharia24@students.dkut.ac.ke
                     </p>
 
                 </div>
@@ -235,18 +323,25 @@ async def portfolio():
             </div>
 
 
-            <!-- ASSIGNMENTS INTRODUCTION -->
+            <!-- BACKEND ASSIGNMENTS -->
 
-            <div class="intro">
+            <div class="assignments-header">
 
-                <h2>Backend Assignments</h2>
+                <span>
+                    📚
+                </span>
 
-                <p>
-                    Click on any assignment to view the
-                    complete code on GitHub.
-                </p>
+                <h2>
+                    Backend Assignments
+                </h2>
 
             </div>
+
+
+            <p class="instruction">
+                Click on any completed assignment to view
+                the complete code on GitHub.
+            </p>
 
 
             <!-- ASSIGNMENTS -->
@@ -254,279 +349,172 @@ async def portfolio():
             <div class="assignments">
 
 
-                <!-- LESSON 1 -->
-
-                <div class="assignment">
-
-                    <div class="lesson">
-                        Lesson 1
-                    </div>
-
-                    <h3>
-                        HTTP & Your First API
-                    </h3>
-
-                    <p>
-                        FastAPI + Uvicorn, HTTP Methods,
-                        Status Codes
-                    </p>
-
-                    <span class="not-available">
-                        No Repository
-                    </span>
-
-                </div>
-
-
-                <!-- LESSON 2 -->
-
-                <div class="assignment">
-
-                    <div class="lesson">
-                        Lesson 2
-                    </div>
-
-                    <h3>
-                        Docker - Packaging Your API
-                    </h3>
-
-                    <p>
-                        Containers, Dockerfiles,
-                        Docker Compose
-                    </p>
-
-                    <span class="not-available">
-                        No Repository
-                    </span>
-
-                </div>
-
-
-                <!-- LESSON 3 -->
-
-                <div class="assignment">
-
-                    <div class="lesson">
-                        Lesson 3
-                    </div>
-
-                    <h3>
-                        Routing, Parameters & Request Bodies
-                    </h3>
-
-                    <p>
-                        Path Parameters, Query Parameters,
-                        Pydantic Validation
-                    </p>
-
-                    <span class="not-available">
-                        No Repository
-                    </span>
-
-                </div>
-
-
                 <!-- LESSON 4 -->
 
-                <div class="assignment">
+                <a
+                    class="assignment"
+                    href="https://github.com/FrancisMwariri/bookstore-api"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
 
-                    <div class="lesson">
+                    <span class="lesson">
                         Lesson 4
-                    </div>
+                    </span>
 
-                    <h3>
+                    <span class="assignment-title">
                         PostgreSQL & SQLModel – Your First Database
-                    </h3>
+                    </span>
 
-                    <p>
-                        ORM, Database Migrations,
-                        SQLModel
-                    </p>
+                    <span class="description">
+                        — ORM, Database Migrations, SQLModel
+                    </span>
 
-                    <a
-                        class="github-link"
-                        href="https://github.com/FrancisMwariri/bookstore-api"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        View on GitHub
-                    </a>
-
-                </div>
+                </a>
 
 
                 <!-- LESSON 5 -->
 
-                <div class="assignment">
+                <a
+                    class="assignment"
+                    href="https://github.com/FrancisMwariri/product-api"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
 
-                    <div class="lesson">
+                    <span class="lesson">
                         Lesson 5
-                    </div>
+                    </span>
 
-                    <h3>
+                    <span class="assignment-title">
                         CRUD Operations
-                    </h3>
+                    </span>
 
-                    <p>
-                        Create, Read, Update, Delete
-                        with Error Handling
-                    </p>
+                    <span class="description">
+                        — Create, Read, Update, Delete with Error Handling
+                    </span>
 
-                    <a
-                        class="github-link"
-                        href="https://github.com/FrancisMwariri/product-api"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        View on GitHub
-                    </a>
-
-                </div>
+                </a>
 
 
                 <!-- LESSON 6 -->
 
-                <div class="assignment">
+                <a
+                    class="assignment"
+                    href="https://github.com/FrancisMwariri/techvault-api"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
 
-                    <div class="lesson">
+                    <span class="lesson">
                         Lesson 6
-                    </div>
+                    </span>
 
-                    <h3>
+                    <span class="assignment-title">
                         Error Handling & Validation
-                    </h3>
+                    </span>
 
-                    <p>
-                        HTTPException, Custom Validators,
-                        Global Handlers
-                    </p>
+                    <span class="description">
+                        — HTTPException, Custom Validators, Global Handlers
+                    </span>
 
-                    <a
-                        class="github-link"
-                        href="https://github.com/FrancisMwariri/techvault-api"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        View on GitHub
-                    </a>
-
-                </div>
+                </a>
 
 
                 <!-- LESSON 7 -->
 
-                <div class="assignment">
+                <a
+                    class="assignment"
+                    href="https://github.com/FrancisMwariri/healthtrack-api"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
 
-                    <div class="lesson">
+                    <span class="lesson">
                         Lesson 7
-                    </div>
+                    </span>
 
-                    <h3>
+                    <span class="assignment-title">
                         User Authentication – JWT & Password Hashing
-                    </h3>
+                    </span>
 
-                    <p>
-                        JWT Tokens, bcrypt,
-                        Login/Register Endpoints
-                    </p>
+                    <span class="description">
+                        — JWT Tokens, bcrypt, Login/Register Endpoints
+                    </span>
 
-                    <a
-                        class="github-link"
-                        href="https://github.com/FrancisMwariri/healthtrack-api"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        View on GitHub
-                    </a>
-
-                </div>
+                </a>
 
 
                 <!-- LESSON 8 -->
 
-                <div class="assignment">
+                <a
+                    class="assignment"
+                    href="https://github.com/FrancisMwariri/clinicguard-api"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
 
-                    <div class="lesson">
+                    <span class="lesson">
                         Lesson 8
-                    </div>
+                    </span>
 
-                    <h3>
+                    <span class="assignment-title">
                         Authorization & Rate Limiting
-                    </h3>
+                    </span>
 
-                    <p>
-                        RBAC, Dependency Injection,
-                        Rate Limiting
-                    </p>
+                    <span class="description">
+                        — RBAC, Dependency Injection, Rate Limiting
+                    </span>
 
-                    <a
-                        class="github-link"
-                        href="https://github.com/FrancisMwariri/clinicguard-api"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        View on GitHub
-                    </a>
-
-                </div>
+                </a>
 
 
                 <!-- LESSON 9 -->
 
-                <div class="assignment">
+                <a
+                    class="assignment"
+                    href="https://github.com/FrancisMwariri/sendit-api"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
 
-                    <div class="lesson">
+                    <span class="lesson">
                         Lesson 9
-                    </div>
+                    </span>
 
-                    <h3>
+                    <span class="assignment-title">
                         File Uploads & External APIs
-                    </h3>
+                    </span>
 
-                    <p>
-                        File Validation, httpx,
-                        Environment Variables
-                    </p>
+                    <span class="description">
+                        — File Validation, httpx, Environment Variables
+                    </span>
 
-                    <a
-                        class="github-link"
-                        href="https://github.com/FrancisMwariri/sendit-api"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        View on GitHub
-                    </a>
-
-                </div>
+                </a>
 
 
                 <!-- LESSON 10 -->
 
-                <div class="assignment">
+                <a
+                    class="assignment"
+                    href="https://github.com/FrancisMwariri/product-api-clouddeploy"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
 
-                    <div class="lesson">
+                    <span class="lesson">
                         Lesson 10
-                    </div>
+                    </span>
 
-                    <h3>
+                    <span class="assignment-title">
                         Testing & Deployment (Cloud)
-                    </h3>
+                    </span>
 
-                    <p>
-                        Pytest, CI/CD,
-                        Render Deployment
-                    </p>
+                    <span class="description">
+                        — Pytest, CI/CD, Render Deployment
+                    </span>
 
-                    <a
-                        class="github-link"
-                        href="https://github.com/FrancisMwariri/product-api-clouddeploy"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        View on GitHub
-                    </a>
-
-                </div>
+                </a>
 
 
             </div>
@@ -537,10 +525,6 @@ async def portfolio():
             <footer>
 
                 <p>
-                    📅 Last Updated: August 2026
-                </p>
-
-                <p>
                     Deployed on Render |
                     <a
                         href="https://github.com/FrancisMwariri"
@@ -549,6 +533,10 @@ async def portfolio():
                     >
                         Source Code on GitHub
                     </a>
+                </p>
+
+                <p>
+                    Last Updated: August 2026
                 </p>
 
             </footer>
